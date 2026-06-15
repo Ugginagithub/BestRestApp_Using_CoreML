@@ -1,0 +1,29 @@
+{
+  "activityEntities" : [
+    "projectCreated",
+    [
+      {
+        "createdDate" : "2026-05-28T06:10:08Z",
+        "event" : "projectCreated",
+        "id" : "DFD71619-CE4C-4550-AB3B-9A74A4AD03EC",
+        "subtitle" : "BestRestModel",
+        "title" : "Project Created"
+      }
+    ]
+  ],
+  "authorName" : "Tarun",
+  "createdDate" : "2026-05-28T06:10:08Z",
+  "description" : "",
+  "id" : "CAEE5824-EB35-4854-B4EF-0BE3577E5595",
+  "license" : "",
+  "location" : "",
+  "modifiedDate" : "2026-05-28T06:10:08Z",
+  "projectName" : "BestRestModel",
+  "settingsEntity" : {
+    "snapshotOnExtendTraining" : true,
+    "snapshotOnResumeTraining" : false
+  },
+  "taskType" : "generalRegresor",
+  "title" : "Tabular Regression",
+  "version" : "1.1"
+}
