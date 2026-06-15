@@ -50,19 +50,26 @@ struct ContentView: View {
         
         //Now building the actual app.
         NavigationStack{
-            VStack{
-                Text("When do you wakeup?")
-                    .font(.headline)
-                DatePicker("Please enter the time", selection: $wakeUp, displayedComponents: .hourAndMinute)
-                    .labelsHidden()
+            /*VStack*/ Form{
                 
-                Text("Desired amount of sleep:")
-                    .font(.headline)
-                Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
+                VStack(alignment: .leading, spacing: 0){
+                    Text("When do you wakeup?")
+                        .font(.headline)
+                    DatePicker("Please enter the time", selection: $wakeUp, displayedComponents: .hourAndMinute)
+                        .labelsHidden()
+                }
                 
-                Text("Amount of coffee you drink?")
-                    .font(.headline)
-                Stepper("\(coffeeAmount) of cup(s)", value: $coffeeAmount, in: 1...20)
+                VStack(alignment: .leading, spacing: 0){
+                    Text("Desired amount of sleep:")
+                        .font(.headline)
+                    Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
+                }
+                
+                VStack(alignment: .leading, spacing: 0){
+                    Text("Amount of coffee you drink?")
+                        .font(.headline)
+                    Stepper(coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups", value: $coffeeAmount, in: 1...20)
+                }
             }
             .navigationTitle("Better Rest")
             .toolbar{
